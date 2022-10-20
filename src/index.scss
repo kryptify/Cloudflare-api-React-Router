@@ -1,0 +1,42 @@
+$theme-colors: (
+  "primary": #3498db,
+  "success": #00c9a7
+);
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+body {
+  background-color: #e0e0e0;
+}
+
+main {
+  min-height: 80vh;
+}
+
+img {
+  height: 36px;
+  width: 160px;
+}
+.bg-success-opacity{
+  background-color: rgba(0,201,167,.1);
+}
+
+.bg-primary-opacity{
+  background-color: rgba(52,152,219,.1);
+  color: #3498db;
+  border: 0;
+}
+
+.bg-primary-opacity:hover{
+  background-color: #3498db;
+  color: #ffffff !important;
+  
+}
+// table{
+//   table_
+// }
+.wrapped-table{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
