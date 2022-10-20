@@ -14,6 +14,12 @@ const Blocktable = (props) => {
         const date = new Date(timestamp * 1000);
         return `${days}${hrs}${mins}${seconds}ago (${date})`
     }
+    const handleGoTransactionButtonClick = () => {
+        if(block.transactions.length) {
+            navigate('/transaction', {state: {txs: block.transactions}})
+            navigate(0)
+        }
+    }
     console.log(props)
     const block = JSON.parse(props.block).result;
     return (
@@ -43,7 +49,7 @@ const Blocktable = (props) => {
                     <tr>
                         <td>Transactions:</td>
                         <td>
-                            <Button className="badge p-2 rounded bg-primary-opacity" onClick={() => {navigate('/transaction', {state: {txs: block.transactions}})}}>
+                            <Button className="badge p-2 rounded bg-primary-opacity" onClick={handleGoTransactionButtonClick}>
                                 {`${block.transactions.length} transactions`}
                             </Button> 
                              in this block

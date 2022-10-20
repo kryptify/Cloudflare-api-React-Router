@@ -25,9 +25,9 @@ const Block = () => {
         },
       })
     ).then(res => {
-      res.json()
-      resp.result ? setBlock(resp) : navigate('/*')
-    }).catch(() => {navigate('/*')})
+      return res.json()
+    }).catch(res => {console.log(res)})
+    resp? setBlock(resp) : navigate('/*')
     
   }, [])
   console.log(block)

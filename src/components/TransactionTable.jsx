@@ -2,7 +2,6 @@ import {Table, Container} from 'react-bootstrap'
 
 const TransactionTable = (props) => {
     const txs = JSON.parse(props.txs);
-    console.log(txs)
     return (
         <Container fluid="md">
             <h3>{`Block  #${Number(txs[0].blockNumber)}`}</h3>
